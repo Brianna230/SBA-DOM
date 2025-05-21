@@ -28,19 +28,6 @@ submitButton.style.backgroundColor = "#81C784"
 submitButton.classList.add("survey-button");
 formSurvey.appendChild(submitButton);
 
-
-
-submitButton.addEventListener("click", (event) =>{
-   if(!formSurvey.checkValidity()){ // Check if user answer question
-    event.preventDefault(); //Prevent form submitting before user answer
-    formSurvey.reportValidity();// browser prompt user to answer questions
-    // console.log('Please fill out all required fields correctly')
-   }else{
-    console.log("Form submitted successfully")
-   }
-
-});
-
 let Quizbutton = document.createElement('button');
 Quizbutton.textContent = "QUIZ TIME"
 console.log(Quizbutton);
@@ -48,4 +35,26 @@ Quizbutton.classList.add("quiz-button");
 formSurvey.appendChild(Quizbutton);
 Quizbutton.style.backgroundColor = "#81C784"
 Quizbutton.style.marginLeft = '30px'
+Quizbutton.style.display ="none"
+formSurvey.appendChild(Quizbutton);
+
+submitButton.addEventListener("click", (event) =>{
+   if(!formSurvey.checkValidity()){ // Check if user answer question
+    event.preventDefault(); //Prevent form submitting before user answer
+    formSurvey.reportValidity();// browser prompt user to answer questions
+    // console.log('Please fill out all required fields correctly')
+   }else{
+    event.preventDefault();
+    console.log("Form submitted successfully")
+    Quizbutton.style.display = "inline-block"
+   }
+
+});
+
+Quizbutton.addEventListener("click",(event)=>{
+   event.preventDefault();
+   window.location.href = "html2.html";
+});
+
+
 console.log(formSurvey.contains(submitButton)); // should return true if it's inside the form
