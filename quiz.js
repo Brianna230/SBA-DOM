@@ -4,27 +4,35 @@ title.innerHTML="Animal Quiz"
 document.body.prepend(title);
 
 document.body.style.backgroundColor = "#FFF8E7"
-let QQuestOne = document.querySelector(".Question1")
-console.log(QQuestOne);
 
-QQuestOne.innerHTML = "1. Which animal make the sound Oink?"
+let ArrayofQuestions =
+  [{question: "1. Which animal make the sound Oink?", 
+    options:["Pig","Dog","Cat"] 
+    ,correct:"Pig"},
 
-let QQuestTwo = document.querySelector(".Question2")
-console.log(QQuestTwo);
+    {question:"2.Which animal live underwater?",
+    options:["Cow","Whale","Dog"]
+    ,correct:"Whale"},
 
-QQuestTwo.innerHTML = "2.Which animal live underwater?"
+    {question:"3.Which animal is a herboivore?",
+    options:["Cow","Tiger","Lion"]
+    ,correct:"Cow"
+    },
 
-let QQuestThree = document.querySelector(".Question3")
-console.log(QQuestThree);
+    {question:"4. Which animal can change colors went it touch it surrounding?",
+    option:["Lizard","Kangaroo","Owl"]
+    ,correct:"Lizard"
 
-QQuestThree.innerHTML = "3.Which animal is a herboivore?"
-let QQuestFour = document.querySelector(".Question4")
-console.log(QQuestFour)
+    },
 
-QQuestFour.innerHTML = "4. Which animal can change colors went it touch it surrounding?"
+    {question:"5.Which animal is said to be the most intelligent",
+    option:["Dolpin","Raven","Iguana"],
+    correct:"Dolpin"
 
-let QQuestFive = document.querySelector(".Question5")
-console.log(QQuestFive)
-QQuestFive.innerHTML = "5.Which animal is said to be the most intelligent"
+}
+];
 
-console.log(QQuestFive);
+
+
+
+
