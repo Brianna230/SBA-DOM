@@ -57,4 +57,12 @@ Quizbutton.addEventListener("click",(event)=>{
 });
 
 
+let element = document.getElementById("QuestOne");
+let nextElement = element.nextElementSibling;
+let originalNode = document.getElementById("surveyForm");
+let clonedNode = originalNode.cloneNode(false);
+document.getElementById('body').appendChild(clonedNode);
+
+
+console.log(nextElement);
 console.log(formSurvey.contains(submitButton)); // should return true if it's inside the form

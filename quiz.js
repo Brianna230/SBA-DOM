@@ -46,7 +46,7 @@ console.log(result);
 
 function ShowQuestion(Question) {
   optionsElement.innerHTML = " "; // empty string clear previous answers
-  let current = ArrayofQuestions[Question]; 
+  let current = ArrayofQuestions[Question];  //store the question object in current using the question index
   questionElement.textContent = current.question;// show the questions in the html
 
  current.options.forEach(option  =>{
@@ -87,6 +87,8 @@ function ShowQuestion(Question) {
 } 
 
 ShowQuestion(currentQuestion);
+
+
 
 
 
